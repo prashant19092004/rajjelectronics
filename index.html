@@ -151,5 +151,34 @@
     </section>
 
     <footer>© 2026 Raj Electronic. All Rights Reserved.</footer>
+
+    <div id="offerPopup" class="popup">
+      <div class="popup-content">
+        <button class="close-popup">&times;</button>
+
+        <a
+          href="https://wa.me/9288429807?text=Hi,%20I%20Want%20Id."
+          target="_blank"
+        >
+          <img src="./banner.png" alt="Special Offer" />
+        </a>
+      </div>
+    </div>
+
+    <script>
+      const popup = document.getElementById('offerPopup');
+      const closeBtn = document.querySelector('.close-popup');
+
+      closeBtn.addEventListener('click', () => {
+        popup.style.display = 'none';
+      });
+
+      // Close when clicking outside the image
+      popup.addEventListener('click', function (e) {
+        if (e.target === popup) {
+          popup.style.display = 'none';
+        }
+      });
+    </script>
   </body>
 </html>
